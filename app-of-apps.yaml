@@ -2,13 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: rhtap-services-app-of-apps
-  namespace: openshift-gitops
+  namespace: gitops-resources
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: openshift-gitops
-    server: {{ .Values.spec.destination.server }}
+    namespace: gitops-resources
   project: default
   source:
     path: ./app-of-apps

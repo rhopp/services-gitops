@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: hive
-  namespace: openshift-gitops
+  namespace: gitops-resources
   finalizers: ["resources-finalizer.argocd.argoproj.io"] 
 spec:
   project: default
