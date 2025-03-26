@@ -6,4 +6,4 @@ resources:
   - allow-argocd-to-manage.yaml
   - operatorGroup.yaml
   - subscription.yaml
-  - multiClusterHub.yaml
+  - multiClusterEngine.yaml

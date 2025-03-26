@@ -47,6 +47,9 @@ metadata:
     name: gitops-resources
     namespace: openshift-gitops
 spec:
+    clusterResourceWhitelist:
+        - group: '*'
+          kind: '*'
     destinations:
         - namespace: '*'
           server: '*'

@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hive
+  name: multicluster-engine
   namespace: gitops-resources
   finalizers: ["resources-finalizer.argocd.argoproj.io"] 
 spec:
   project: gitops-resources
   source:
-    path: ./components/hive
+    path: ./components/multicluster-engine
     repoURL: https://github.com/rhopp/services-gitops
     targetRevision: main
   destination:
-    namespace: hive
+    namespace: multicluster-engine
     server: https://kubernetes.default.svc
   syncPolicy:
     managedNamespaceMetadata:

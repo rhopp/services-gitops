@@ -1,0 +1,6 @@
+apiVersion: operator.open-cluster-management.io/v1
+kind: MultiClusterEngine
+metadata:
+  name: engine
+  namespace: multicluster-engine
+spec: {}
