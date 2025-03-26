@@ -5,7 +5,7 @@ metadata:
   namespace: gitops-resources
   finalizers: ["resources-finalizer.argocd.argoproj.io"] 
 spec:
-  project: default
+  project: gitops-resources
   source:
     path: ./components/hive
     repoURL: https://github.com/rhopp/services-gitops

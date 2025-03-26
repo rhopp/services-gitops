@@ -3,12 +3,10 @@ kind: Application
 metadata:
   name: rhtap-services-app-of-apps
   namespace: gitops-resources
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: gitops-resources
-  project: default
+  project: gitops-resources
   source:
     path: ./app-of-apps
     repoURL: https://github.com/rhopp/services-gitops
