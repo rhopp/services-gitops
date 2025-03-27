@@ -11,7 +11,7 @@ spec:
     name: "global-pull-secret"
   managedDomains:
     - aws:
-      credentialsSecretRef:
-        name: "hive-aws-creds"
+        credentialsSecretRef:
+          name: "hive-aws-creds"
       domains:
         - "rhtap.devcluster.openshift.com"

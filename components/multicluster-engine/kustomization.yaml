@@ -8,3 +8,4 @@ resources:
   - subscription.yaml
   - multiClusterEngine.yaml
   - hiveconfig.yaml
+  - clusterPool.yaml

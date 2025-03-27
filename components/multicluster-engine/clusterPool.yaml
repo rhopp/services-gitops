@@ -1,0 +1,20 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterPool
+metadata:
+  name: clusterpool
+  namespace: hive
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  baseDomain: rhtap.devcluster.openshift.com
+  imageSetRef:
+    name: img4.18.5-x86-64-appsub
+  platform:
+    aws:
+      credentialsSecretRef:
+        name: hive-aws-creds
+      region: us-east-1
+  pullSecretRef:
+    name: global-pull-secret
+  runningCount: 1
+  size: 2
