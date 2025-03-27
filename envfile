@@ -1,0 +1,6 @@
+## Pull secret
+## Obtain from https://console.redhat.com/openshift
+export PULL_SECRET=
+
+export AWS_ACCESS_KEY_ID=
+export AWS_SECRET_ACCESS_KEY=

@@ -26,11 +26,13 @@ grant_admin_role_to_all_authenticated_users() {
     kubectl patch argocd/openshift-gitops -n openshift-gitops -p '{"spec":{"rbac":{"policy":"g, system:authenticated, role:admin"}}}' --type=merge
 }
 
-set_trackingmethod_annotation() {
-    echo "Setting ArgoCD tracking method to annotation"
+patch_argocd_instance() {
+    echo "Setting ArgoCD tracking method to annotation and adding \"gitops-resources\" ns to sourceNamespaces"
     kubectl patch argocd/openshift-gitops -n openshift-gitops -p '
 spec:
   resourceTrackingMethod: annotation
+  sourceNamespaces:
+    - gitops-resources
 ' --type=merge
 }
 
@@ -68,6 +70,6 @@ create_app_of_apps(){
 create_subscription
 wait_for_route
 grant_admin_role_to_all_authenticated_users
-set_trackingmethod_annotation
+patch_argocd_instance
 create_namespace_and_AppProject
 create_app_of_apps

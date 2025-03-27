@@ -7,3 +7,4 @@ resources:
   - operatorGroup.yaml
   - subscription.yaml
   - multiClusterEngine.yaml
+  - hiveconfig.yaml
