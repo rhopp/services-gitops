@@ -8,7 +8,7 @@ metadata:
 spec:
   baseDomain: konflux-qe.devcluster.openshift.com
   imageSetRef:
-    name: img4.18.5-x86-64-appsub
+    name: img4.17.22-x86-64-appsub
   platform:
     aws:
       credentialsSecretRef:
