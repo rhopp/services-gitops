@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
-  baseDomain: konflux-qe.devcluster.openshift.com
+  baseDomain: rhtap.devcluster.openshift.com
   imageSetRef:
     name: img4.17.22-x86-64-appsub
   platform:
