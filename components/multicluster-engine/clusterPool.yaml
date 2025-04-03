@@ -18,6 +18,9 @@ spec:
     name: install-config-template
   pullSecretRef:
     name: global-pull-secret
+  claimLifetime:
+    default: 2h
+    maximum: 8h
   runningCount: 0
   size: 1
   maxConcurrent: 2
